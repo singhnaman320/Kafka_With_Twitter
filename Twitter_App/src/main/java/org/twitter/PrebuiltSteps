@@ -38,3 +38,10 @@
     A term 'hbc' is used in the dependency code. It stands for 'Hosebird Client' which is a java HTTP client. It is used
     for consuming Twitter's standard streaming API. The Hosebird Client is divided into two modules:
 
+    [] hbc-core: It uses a message queue. This message queue is further used by the consumer to poll for raw string
+                 messages.
+
+    [] hbc-twitter4j: This is different from hbc-core as it uses the twitter4j listeners. Twitter4j is an unofficial java
+                   library through which we can easily integrate our java build application with various twitter services.
+
+    In the twitter dependency code, hbc-core is used. Users can also use twitter4j instead.
