@@ -10,3 +10,6 @@
 
     Step6: The next section is the Review section. Here, the user explanations will be reviewed by Twitter.If twitter
            finds the answers appropriate, 'Looks good' option will get enabled. Then, move to the next section.
+
+    Step7: Finally, the user will be asked to review and accept the Developer Agreement. Accept the agreement by
+           clicking on the checkbox. Submit the application by clicking on the 'Submit Application'.
