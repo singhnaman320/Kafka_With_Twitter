@@ -23,3 +23,9 @@
 
     Step11: After giving the app details, click on the 'Create' option. A dialog box will open "Review our Developer
             Terms". Click on the 'Create' option. Finally, the app will be created.
+
+    Note: When the app will be created. It will generate Keys and Tokens. Do not disclose them as these are the secret
+          or sensitive information. If did so, the user can regenerate them for safety purposes.
+
+    Step12: After creating an app, we need to add the twitter dependency in the 'pom.xml' file. To do so, open 'github
+            twitter java' on a web browser.
