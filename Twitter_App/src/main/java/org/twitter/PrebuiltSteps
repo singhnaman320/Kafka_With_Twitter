@@ -29,3 +29,8 @@
 
     Step12: After creating an app, we need to add the twitter dependency in the 'pom.xml' file. To do so, open 'github
             twitter java' on a web browser.
+
+    Step13: There, the user will find the twitter dependency code. Copy the code and paste it in the 'pom.xml' file
+            below the maven dependency code.
+
+    =-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-
