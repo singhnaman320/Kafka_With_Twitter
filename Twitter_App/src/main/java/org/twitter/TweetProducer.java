@@ -8,10 +8,14 @@ import com.twitter.hbc.core.endpoint.StatusesFilterEndpoint;
 import com.twitter.hbc.core.event.Event;
 import com.twitter.hbc.httpclient.auth.Authentication;
 import com.twitter.hbc.httpclient.auth.OAuth1;
+import org.apache.kafka.clients.producer.KafkaProducer;
+import org.apache.kafka.clients.producer.ProducerConfig;
+import org.apache.kafka.common.serialization.StringSerializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
+import java.util.Properties;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
@@ -34,10 +38,23 @@ public class TweetProducer {
     // This is secret access token key from Twitter
     String secretAccessTokenKey = "5ol4Ym9aRi3ZVSo1w1LQMg6ASW10FM02y4max1pEzhPti";
 
+    // Constructor to invoke producer function
+    public TweetProducer() {
+    }
 
+    // Creating kafka producer and producer properties
+    public KafkaProducer<String, String> createKafkaProducer(){
+
+        String bootstrapServers = "localhost:9092";
+
+        Properties properties = new Properties();
+
+
+    }
 
     public static void main(String[] args) {
 
+        TweetProducer tweetProducer = new TweetProducer();
 
     }
 }
