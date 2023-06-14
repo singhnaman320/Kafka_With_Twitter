@@ -98,6 +98,24 @@ public class TweetProducer {
         Client client = tweetClient(msgQueue);
         client.connect(); //invokes the connection function
 
+        KafkaProducer<String, String> producer = createKafkaProducer();
+
+        // on a different thread, or multiple different threads....
+        while (!client.isDone()){
+
+            String msg  = null;
+
+            try {
+
+                msg = msgQueue.poll(5, TimeUnit.SECONDS);
+
+            } catch (InterruptedException e) {
+
+                e.printStackTrace();
+                client.stop();
+            }
+
+
     }
 
     public static void main(String[] args) {
