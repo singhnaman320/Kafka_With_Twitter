@@ -83,6 +83,9 @@ public class TweetProducer {
                 .endpoint(hosebirdEndpoint)
                 .processor(new StringDelimitedProcessor(msgQueue));
 
+        Client hosebirdClient = builder.build();
+
+        return hosebirdClient;  // Attempts to establish a connection.
     }
 
     public  void run(){
