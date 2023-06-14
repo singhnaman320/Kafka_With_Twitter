@@ -68,6 +68,8 @@ public class TweetProducer {
         /* Declare the host you want to connect to, the endpoint, and authentication (basic auth or oauth) */
         Hosts hosebirdHosts = new HttpHosts(Constants.STREAM_HOST);
         StatusesFilterEndpoint hosebirdEndpoint = new StatusesFilterEndpoint();
+        List<String> terms = Lists.newArrayList("twitter", "api"); //describe anything for which we want to read the tweets.
+        hosebirdEndpoint.trackTerms(terms);
 
     }
 
