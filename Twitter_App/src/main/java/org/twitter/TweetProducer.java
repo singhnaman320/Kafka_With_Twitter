@@ -71,6 +71,12 @@ public class TweetProducer {
         List<String> terms = Lists.newArrayList("twitter", "api"); //describe anything for which we want to read the tweets.
         hosebirdEndpoint.trackTerms(terms);
 
+        // These secrets should be read from a config file
+        Authentication hosebirdAuth = new OAuth1("consumerKey",
+                "consumerSecretKey", "accessTokenKey", "secretAccessTokenKey");
+
+
+
     }
 
     public  void run(){
