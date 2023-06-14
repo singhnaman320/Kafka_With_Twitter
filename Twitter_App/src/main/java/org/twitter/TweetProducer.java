@@ -115,7 +115,24 @@ public class TweetProducer {
                 client.stop();
             }
 
+            if(msg != null){
 
+                logger.info(msg);
+
+                producer.send(new ProducerRecord<>("TwitterTopic", null, msg), new Callback() {
+                    @Override
+                    public void onCompletion(RecordMetadata recordMetadata, Exception exception) {
+
+                        if(exception != null){
+
+                            logger.error("Something went wrong", exception);
+                        }
+                    }
+                });
+            }
+        }
+        // When the reading is complete, inform logger
+        logger.info("This is the end");
     }
 
     public static void main(String[] args) {
