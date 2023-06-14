@@ -76,6 +76,8 @@ public class TweetProducer {
                 "consumerSecretKey", "accessTokenKey", "secretAccessTokenKey");
 
 
+        ClientBuilder builder = new ClientBuilder()
+                .name("Hosebird-Client-01")                // optional: mainly for the logs
 
     }
 
