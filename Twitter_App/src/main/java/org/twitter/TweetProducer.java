@@ -11,8 +11,7 @@ import com.twitter.hbc.core.event.Event;
 import com.twitter.hbc.core.processor.StringDelimitedProcessor;
 import com.twitter.hbc.httpclient.auth.Authentication;
 import com.twitter.hbc.httpclient.auth.OAuth1;
-import org.apache.kafka.clients.producer.KafkaProducer;
-import org.apache.kafka.clients.producer.ProducerConfig;
+import org.apache.kafka.clients.producer.*;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,6 +20,7 @@ import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.TimeUnit;
 
 /*
     For this use: https://github.com/twitter/hbc
@@ -92,8 +92,11 @@ public class TweetProducer {
 
         logger.info("Setup");
 
-        BlockingQueue<String> msgQueue = new LinkedBlockingQueue<>(1000); // Specify the size
+        /* Set up your blocking queues: Be sure to size these properly based on expected TPS of your stream */
+        BlockingQueue<String> msgQueue = new LinkedBlockingQueue<String>(100000); // Specify the size
 
+        Client client = tweetClient(msgQueue);
+        client.connect(); //invokes the connection function
 
     }
 
