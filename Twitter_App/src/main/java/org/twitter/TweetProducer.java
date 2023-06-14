@@ -78,6 +78,10 @@ public class TweetProducer {
 
         ClientBuilder builder = new ClientBuilder()
                 .name("Hosebird-Client-01")                // optional: mainly for the logs
+                .hosts(hosebirdHosts)
+                .authentication(hosebirdAuth)
+                .endpoint(hosebirdEndpoint)
+                .processor(new StringDelimitedProcessor(msgQueue));
 
     }
 
