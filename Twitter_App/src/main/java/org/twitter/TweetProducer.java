@@ -8,6 +8,8 @@ import com.twitter.hbc.core.endpoint.StatusesFilterEndpoint;
 import com.twitter.hbc.core.event.Event;
 import com.twitter.hbc.httpclient.auth.Authentication;
 import com.twitter.hbc.httpclient.auth.OAuth1;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
@@ -17,6 +19,23 @@ import java.util.concurrent.LinkedBlockingQueue;
     For this use: https://github.com/twitter/hbc
     */
 public class TweetProducer {
+
+    Logger logger = LoggerFactory.getLogger(TweetProducer.class.getName());
+
+    // This is API key from Twitter
+    String consumerKey = "H1MStpybqe0Gy5PTPYZlwLvrJ";
+
+    // This is secret API key from Twitter
+    String consumerSecretKey = "xpUlDW0njWFHo5js0MKOhzEI5QkHfcmPCQwIE4Bdc0Rlj61G3l";
+
+    // This is access token key from Twitter
+    String accessTokenKey = "813022289713364992-WMWDqw3M4qjnqEx0XgSD4ENRL6yDYP0";
+
+    // This is secret access token key from Twitter
+    String secretAccessTokenKey = "5ol4Ym9aRi3ZVSo1w1LQMg6ASW10FM02y4max1pEzhPti";
+
+
+
     public static void main(String[] args) {
 
 
