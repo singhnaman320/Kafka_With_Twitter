@@ -53,6 +53,9 @@ public class TweetProducer {
         properties.setProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
         properties.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
 
+        KafkaProducer<String, String> producerOne = new KafkaProducer<>(properties);
+
+        return producerOne;
     }
 
     public static void main(String[] args) {
