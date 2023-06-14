@@ -66,6 +66,8 @@ public class TweetProducer {
         // From: https://github.com/twitter/hbc
 
         /* Declare the host you want to connect to, the endpoint, and authentication (basic auth or oauth) */
+        Hosts hosebirdHosts = new HttpHosts(Constants.STREAM_HOST);
+        StatusesFilterEndpoint hosebirdEndpoint = new StatusesFilterEndpoint();
 
     }
 
