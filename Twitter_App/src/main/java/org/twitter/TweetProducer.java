@@ -55,9 +55,7 @@ public class TweetProducer {
         properties.setProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
         properties.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
 
-        KafkaProducer<String, String> producerOne = new KafkaProducer<>(properties);
-
-        return producerOne;
+        return new KafkaProducer<>(properties);
     }
 
     public Client tweetClient(BlockingQueue<String> msgQueue){
@@ -82,9 +80,7 @@ public class TweetProducer {
                 .endpoint(hosebirdEndpoint)
                 .processor(new StringDelimitedProcessor(msgQueue));
 
-        Client hosebirdClient = builder.build();
-
-        return hosebirdClient;  // Attempts to establish a connection.
+        return builder.build();  // Attempts to establish a connection.
     }
 
     public  void run(){
