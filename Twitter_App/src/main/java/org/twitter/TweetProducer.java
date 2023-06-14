@@ -67,12 +67,12 @@ public class TweetProducer {
         /* Declare the host you want to connect to, the endpoint, and authentication (basic auth or oauth) */
         Hosts hosebirdHosts = new HttpHosts(Constants.STREAM_HOST);
         StatusesFilterEndpoint hosebirdEndpoint = new StatusesFilterEndpoint();
-        List<String> terms = Lists.newArrayList("twitter", "api"); //describe anything for which we want to read the tweets.
+        List<String> terms = Lists.newArrayList("India"); //describe anything for which we want to read the tweets.
         hosebirdEndpoint.trackTerms(terms);
 
         // These secrets should be read from a config file
-        Authentication hosebirdAuth = new OAuth1("consumerKey",
-                "consumerSecretKey", "accessTokenKey", "secretAccessTokenKey");
+        Authentication hosebirdAuth = new OAuth1(consumerKey,
+                consumerSecretKey, accessTokenKey, secretAccessTokenKey);
 
 
         ClientBuilder builder = new ClientBuilder()
@@ -92,7 +92,7 @@ public class TweetProducer {
         logger.info("Setup");
 
         /* Set up your blocking queues: Be sure to size these properly based on expected TPS of your stream */
-        BlockingQueue<String> msgQueue = new LinkedBlockingQueue<String>(100000); // Specify the size
+        BlockingQueue<String> msgQueue = new LinkedBlockingQueue<String>(1000); // Specify the size
 
         Client client = tweetClient(msgQueue);
         client.connect(); //invokes the connection function
