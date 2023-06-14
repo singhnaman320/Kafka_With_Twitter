@@ -138,6 +138,6 @@ public class TweetProducer {
     public static void main(String[] args) {
 
         TweetProducer tweetProducer = new TweetProducer();
-
+        tweetProducer.run();
     }
 }
