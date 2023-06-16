@@ -29,16 +29,16 @@ public class TweetProducer {
     Logger logger = LoggerFactory.getLogger(TweetProducer.class.getName());
 
     // This is API key from Twitter
-    String consumerKey = "H1MStpybqe0Gy5PTPYZlwLvrJ";
+    String consumerKey = "dgoOJPpE1nKhN9UUzvJlwSxOu";
 
     // This is secret API key from Twitter
-    String consumerSecretKey = "xpUlDW0njWFHo5js0MKOhzEI5QkHfcmPCQwIE4Bdc0Rlj61G3l";
+    String consumerSecretKey = "gtNfVF0J8OvhCuWQl7oF8AjPTiIQaP3U4n9Rt1VTUW2aK1FdEz";
 
     // This is access token key from Twitter
-    String accessTokenKey = "813022289713364992-WMWDqw3M4qjnqEx0XgSD4ENRL6yDYP0";
+    String accessTokenKey = "813022289713364992-VqpO4tZFbgglV4nDgCghQoB68abVKHN";
 
     // This is secret access token key from Twitter
-    String secretAccessTokenKey = "5ol4Ym9aRi3ZVSo1w1LQMg6ASW10FM02y4max1pEzhPti";
+    String secretAccessTokenKey = "L733a7NBQnqMuOq4oby9Mvv7sYG4hZXXY78XP0hmoBMmg";
 
     // Constructor to invoke producer function
     public TweetProducer() {

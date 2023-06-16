@@ -40,6 +40,8 @@
             below the maven dependency code.
 
     =-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-
+    [] Hosebird Client []
+    ====================================================================================================================
 
     A term 'hbc' is used in the dependency code. It stands for 'Hosebird Client' which is a java HTTP client. It is used
     for consuming Twitter's standard streaming API. The Hosebird Client is divided into two modules:
